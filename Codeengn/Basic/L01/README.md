@@ -35,7 +35,7 @@
 0040101E  |. 48             DEC EAX 		;EAX의 값을 1감소
 0040101F  |. EB 00          JMP SHORT 01.00401021
 00401021  |> 46             INC ESI 		;ESI의 값을 1증가
-00401022  |. 46             INC ESI		;ESI의 값을 1감소
+00401022  |. 46             INC ESI		;ESI의 값을 1증가
 00401023  |. 48             DEC EAX		;EAX의 값을 1감소
 00401024  |. 3BC6           CMP EAX,ESI		; EAX와 ESI의 값을 비교
 
