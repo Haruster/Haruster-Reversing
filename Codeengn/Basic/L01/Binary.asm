@@ -5,13 +5,13 @@
 0040100E  |. E8 4E000000    CALL <JMP.&USER32.MessageBoxA>           ; \MessageBoxA
 00401013  |. 68 94204000    PUSH 01.00402094                         ; /RootPathName = "c:\"
 00401018  |. E8 38000000    CALL <JMP.&KERNEL32.GetDriveTypeA>       ; \GetDriveTypeA
-0040101D  |. 46             INC ESI
-0040101E  |. 48             DEC EAX
+0040101D  |. 46             INC ESI                                  ;ESI의 값을 1증가
+0040101E  |. 48             DEC EAX                                  ;EAX의 값을 1감소
 0040101F  |. EB 00          JMP SHORT 01.00401021
-00401021  |> 46             INC ESI
-00401022  |. 46             INC ESI
-00401023  |. 48             DEC EAX
-00401024  |. 3BC6           CMP EAX,ESI
+00401021  |> 46             INC ESI                                  ;ESI의 값을 1증가
+00401022  |. 46             INC ESI                                  ;ESI의 값을 1증가
+00401023  |. 48             DEC EAX                                  ;EAX의 값을 1감소
+00401024  |. 3BC6           CMP EAX,ESI                              ;EAX와 ESI를 
 00401026  |. 74 15          JE SHORT 01.0040103D
 00401028  |. 6A 00          PUSH 0                                   ; /Style = MB_OK|MB_APPLMODAL
 0040102A  |. 68 35204000    PUSH 01.00402035                         ; |Title = "Error"
